@@ -242,7 +242,7 @@ if show_y_intercept:
 if show_roots and delta >= 0:
     for idx, r in enumerate(props["roots"]):
         if isinstance(r, (float, int, np.floating)):
-            ax.scatter([r], [0], color="#059669", s=80, zorder=5, label=f"Root / X-Intercept ({r:.2f}, 0)" if idx == 0 else "")
+            ax.scatter([r], [0], color="#059669", s=80, zorder=5, label=f"X-Intercept ({r:.2f}, 0)" if idx == 0 else "")
             ax.annotate(
                 f"x = {r:.2f}",
                 (r, 0),
