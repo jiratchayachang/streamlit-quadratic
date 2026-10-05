@@ -3,8 +3,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Configure Matplotlib for Thai font rendering on Windows/Systems
-plt.rcParams['font.family'] = ['Tahoma', 'Leelawadee', 'Segoe UI', 'Arial Unicode MS', 'sans-serif']
+# Configure Matplotlib default styles
 plt.rcParams['axes.unicode_minus'] = False  # Display negative signs correctly
 
 st.set_page_config(
@@ -151,9 +150,9 @@ if a == 0:
     ax_lin.plot(x_linear, y_linear, color="#DC2626", linewidth=2, label=f"y = {b}x + {c}")
     ax_lin.axhline(0, color="black", linestyle="--", alpha=0.5)
     ax_lin.axvline(0, color="black", linestyle="--", alpha=0.5)
-    ax_lin.set_xlabel("x")
-    ax_lin.set_ylabel("y")
-    ax_lin.set_title("กราฟฟังก์ชันเชิงเส้น (Linear Function เมื่อ a = 0)")
+    ax_lin.set_xlabel("X")
+    ax_lin.set_ylabel("Y")
+    ax_lin.set_title("Linear Function (a = 0)")
     ax_lin.grid(True, alpha=0.3)
     ax_lin.legend()
     st.pyplot(fig_lin)
@@ -220,11 +219,11 @@ ax.axvline(0, color="#374151", linestyle="-", linewidth=1.2, alpha=0.7)
 
 # 1. Axis of Symmetry
 if show_axis_sym:
-    ax.axvline(h, color="#9333EA", linestyle="--", linewidth=1.5, label=f"แกนสมมติ $x = {h:.2f}$")
+    ax.axvline(h, color="#9333EA", linestyle="--", linewidth=1.5, label=f"Axis of Symmetry ($x = {h:.2f}$)")
 
 # 2. Vertex Marker
 if show_vertex:
-    ax.scatter([h], [k], color="#DC2626", s=90, zorder=5, label=f"จุดยอด ({h:.2f}, {k:.2f})")
+    ax.scatter([h], [k], color="#DC2626", s=90, zorder=5, label=f"Vertex ({h:.2f}, {k:.2f})")
     ax.annotate(
         f"  Vertex ({h:.2f}, {k:.2f})",
         (h, k),
@@ -237,13 +236,13 @@ if show_vertex:
 
 # 3. Y-Intercept Marker
 if show_y_intercept:
-    ax.scatter([0], [c], color="#D97706", s=70, zorder=5, label=f"จุดตัดแกน Y (0, {c:.2f})")
+    ax.scatter([0], [c], color="#D97706", s=70, zorder=5, label=f"Y-Intercept (0, {c:.2f})")
 
 # 4. Roots Markers (x-intercepts)
 if show_roots and delta >= 0:
     for idx, r in enumerate(props["roots"]):
         if isinstance(r, (float, int, np.floating)):
-            ax.scatter([r], [0], color="#059669", s=80, zorder=5, label=f"จุดตัดแกน X ({r:.2f}, 0)" if idx == 0 else "")
+            ax.scatter([r], [0], color="#059669", s=80, zorder=5, label=f"Root / X-Intercept ({r:.2f}, 0)" if idx == 0 else "")
             ax.annotate(
                 f"x = {r:.2f}",
                 (r, 0),
@@ -260,7 +259,7 @@ if show_tangent:
     y0 = a * (x0_tangent ** 2) + b * x0_tangent + c
     slope = 2 * a * x0_tangent + b
     y_tangent = slope * (x - x0_tangent) + y0
-    ax.plot(x, y_tangent, color="#E11D48", linestyle="-.", linewidth=1.8, label=f"เส้นสัมผัสที่ x={x0_tangent:.1f} (ความชัน m={slope:.2f})")
+    ax.plot(x, y_tangent, color="#E11D48", linestyle="-.", linewidth=1.8, label=f"Tangent at x0={x0_tangent:.1f} (m={slope:.2f})")
     ax.scatter([x0_tangent], [y0], color="#E11D48", s=60, zorder=6)
 
 # Formatting plot styling
@@ -269,9 +268,9 @@ ax.set_xlim([x_min, x_max])
 y_margin = (max(y) - min(y)) * 0.15 if max(y) != min(y) else 5
 ax.set_ylim([min(y) - y_margin, max(y) + y_margin])
 
-ax.set_xlabel("แกน X (Domain)", fontsize=10, fontweight='bold')
-ax.set_ylabel("แกน Y (Range)", fontsize=10, fontweight='bold')
-ax.set_title(f"กราฟพาราโบลา $y = {a:.2f}x^2 + ({b:.2f})x + ({c:.2f})$", fontsize=12, fontweight='bold', pad=12)
+ax.set_xlabel("X (Domain)", fontsize=10, fontweight='bold')
+ax.set_ylabel("Y (Range)", fontsize=10, fontweight='bold')
+ax.set_title(f"Parabola: $y = {a:.2f}x^2 + ({b:.2f})x + ({c:.2f})$", fontsize=12, fontweight='bold', pad=12)
 ax.grid(True, linestyle=":", alpha=0.6)
 ax.legend(loc="upper right", frameon=True, facecolor="#FFFFFF", framealpha=0.9, fontsize=9)
 
