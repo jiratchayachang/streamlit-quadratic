@@ -1,0 +1,27 @@
+📈 Quadratic Explorer 
+📝 คำอธิบายโปรเจกต์ (Project Description)
+เว็บแอปพลิเคชัน Quadratic Explorer ช่วยผู้เรียนและผู้สนใจคณิตศาสตร์วิเคราะห์และทำความเข้าใจพฤติกรรมของฟังก์ชันกำลังสอง ($y = ax^2 + bx + c$) แบบมีปฏิสัมพันธ์ (Interactive) โดยเปิดรับค่าสัมประสิทธิ์ $a, b, c$ และช่วงแกน $X$ เพื่อประมวลผลคำนวณพิกัดจุดยอด (Vertex), ดิสครีมิแนนต์ ($\Delta$), แกนสมมติ, เส้นสัมผัส และรากของสมการ (ทั้งจำนวนจริงและจำนวนเชิงซ้อน) พร้อมแสดงผลผ่านกราฟ Matplotlib รูปแบบสมการ LaTeX ตารางพิกัด และเปิดให้ดาวน์โหลดข้อมูลเป็นไฟล์ CSV🎯 
+คุณสมบัติหลัก (Features)
+Interactive Inputs: ปรับเปลี่ยนค่า $a, b, c$ ผ่าน Slider/Selectbox Preset ใน Sidebar
+Validation Check: ระบบตรวจจับกรณี $a = 0$ (แจ้งเตือนว่าเป็นฟังก์ชันเชิงเส้น) และกรณี $x_{\min} \ge x_{\max}
+$Calculus Insights: แสดงอนุพันธ์อันดับ 1 ($f'(x)$), อนุพันธ์อันดับ 2 ($f''(x)$) และสมการเส้นสัมผัสกราฟ
+Multiple Output Views:
+Metrics สรุปจุดสำคัญ
+กราฟแสดงพาราโบลาพร้อม Marker
+รูปแบบสมการ (Standard Form, Vertex Form, Factored Form
+ตารางพิกัด $(x, y)$ และปุ่มดาวน์โหลด CSV🚀 
+วิธีการรันในเครื่อง Local (VS Code)เปิด Terminal ใน VS Code และเปิดใช้งาน Virtual Environment:
+py -m venv .venv
+.venv\Scripts\activate.bat
+ติดตั้ง Dependencies:
+python -m pip install -r requirements.txt
+รันแอปพลิเคชัน:
+python -m streamlit run app.py
+📋 แบบตรวจงานก่อนส่ง (Pre-submission Checklist)
+[x] แอปเปิดได้โดยไม่มี Error (ทดสอบ $a \neq 0$ และ $a = 0$)
+[x] Widget ทุกตัวมีผลต่อการคำนวณจริง ($a, b, c$, ขอบเขต $x$, สวิตช์เปิด/ปิด Marker)
+[x] ชื่อหัวข้อและป้ายกำกับเข้าใจได้ง่าย (ภาษาไทยพร้อมสัญลักษณ์ทางคณิตศาสตร์)
+[x] กราฟมีชื่อแกนและคำอธิบายที่เหมาะสม (Domain/Range, Legend)
+[x] ไม่มี Password, API Key หรือโฟลเดอร์ .venv ใน GitHub
+[x] มีไฟล์ requirements.txt ครบถ้วน
+[x] สามารถ Deploy บน Streamlit Community Cloud ได้สำเร็จ
