@@ -18,10 +18,10 @@ python -m pip install -r requirements.txt
 รันแอปพลิเคชัน:
 python -m streamlit run app.py
 📋 แบบตรวจงานก่อนส่ง (Pre-submission Checklist)
-[x] แอปเปิดได้โดยไม่มี Error (ทดสอบ $a \neq 0$ และ $a = 0$)
-[x] Widget ทุกตัวมีผลต่อการคำนวณจริง ($a, b, c$, ขอบเขต $x$, สวิตช์เปิด/ปิด Marker)
-[x] ชื่อหัวข้อและป้ายกำกับเข้าใจได้ง่าย (ภาษาไทยพร้อมสัญลักษณ์ทางคณิตศาสตร์)
-[x] กราฟมีชื่อแกนและคำอธิบายที่เหมาะสม (Domain/Range, Legend)
-[x] ไม่มี Password, API Key หรือโฟลเดอร์ .venv ใน GitHub
-[x] มีไฟล์ requirements.txt ครบถ้วน
-[x] สามารถ Deploy บน Streamlit Community Cloud ได้สำเร็จ
+[1] แอปเปิดได้โดยไม่มี Error (ทดสอบ $a \neq 0$ และ $a = 0$)
+[2] Widget ทุกตัวมีผลต่อการคำนวณจริง ($a, b, c$, ขอบเขต $x$, สวิตช์เปิด/ปิด Marker)
+[3] ชื่อหัวข้อและป้ายกำกับเข้าใจได้ง่าย (ภาษาไทยพร้อมสัญลักษณ์ทางคณิตศาสตร์)
+[4] กราฟมีชื่อแกนและคำอธิบายที่เหมาะสม (Domain/Range, Legend)
+[5] ไม่มี Password, API Key หรือโฟลเดอร์ .venv ใน GitHub
+[6] มีไฟล์ requirements.txt ครบถ้วน
+[7] สามารถ Deploy บน Streamlit Community Cloud ได้สำเร็จ
