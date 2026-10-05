@@ -129,7 +129,7 @@ x_max = st.sidebar.number_input("ค่า X สูงสุด (x_max)", value=
 num_points = st.sidebar.slider("จำนวนจุดคำนวณ (Resolution)", 50, 500, 200)
 
 show_vertex = st.sidebar.checkbox("แสดงจุดยอด (Vertex)", value=True)
-show_roots = st.sidebar.checkbox("แสดงจุดตัดแกน X (Roots)", value=True)
+show_roots = st.sidebar.checkbox("แสดงจุดตัดแกน X (X-Intercept)", value=True)
 show_y_intercept = st.sidebar.checkbox("แสดงจุดตัดแกน Y (Y-Intercept)", value=True)
 show_axis_sym = st.sidebar.checkbox("แสดงเส้นแกนสมมติ (Axis of Symmetry)", value=True)
 show_tangent = st.sidebar.checkbox("แสดงเส้นสัมผัสกราฟ (Tangent Line)", value=False)
@@ -420,7 +420,10 @@ with tab_guide:
     - **$\Delta < 0$:** กราฟ **ไม่ตัดแกน X** ในระบบจำนวนจริง
     
     #### 3. ตัวอย่างการนำไปประยุกต์ใช้งานจริง (Real-world Applications)
-    - **ฟิสิกส์ (Projectile Motion):** การเคลื่อนที่แบบโปรเจกไทล์ เช่น การโยนลูกบอล $h(t) = - \frac{1}{2}gt^2 + v_0 t + h_0$
-    - **วิศวกรรม (Structural Design):** การออกแบบสะพานแขวน จานดาวเทียม และไฟหน้ารถยนต์
+    - **ฟิสิกส์ (Projectile Motion):** การเคลื่อนที่แบบโปรเจกไทล์ เช่น การโยนลูกบอล
+    """)
+    st.latex(r"h(t) = -\frac{1}{2}gt^2 + v_0 t + h_0")
+    st.markdown("""
+    - **วิศวรรกม (Structural Design):** การออกแบบสะพานแขวน จานดาวเทียม และไฟหน้ารถยนต์
     - **เศรษฐศาสตร์ (Business Optimization):** การหาจุดกำไรสูงสุด (Maximum Profit) หรือต้นทุนต่ำสุด (Minimum Cost)
     """)
